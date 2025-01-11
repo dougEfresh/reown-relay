@@ -1,7 +1,7 @@
 use {
     crate::{error::Error, ClientError},
     pin_project::pin_project,
-    relay_rpc::rpc::{Params, ServiceRequest},
+    reown_relay_rpc::rpc::{Params, ServiceRequest},
     std::{
         future::Future,
         marker::PhantomData,

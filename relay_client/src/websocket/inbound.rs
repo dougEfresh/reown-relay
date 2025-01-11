@@ -4,7 +4,7 @@ use tokio_tungstenite::tungstenite::Message;
 use tokio_tungstenite_wasm::Message;
 use {
     crate::ClientError,
-    relay_rpc::{
+    reown_relay_rpc::{
         domain::MessageId,
         rpc::{self, ErrorResponse, Payload, Response, ServiceRequest, SuccessfulResponse},
     },
@@ -16,7 +16,7 @@ use {
 /// the response channel (via [`InboundRequest::respond()`]).
 ///
 /// Currently, the only inbound RPC request the client can receive is
-/// [`Subscription`][relay_rpc::rpc::Subscription].
+/// [`Subscription`][reown_relay_rpc::rpc::Subscription].
 #[derive(Debug)]
 pub struct InboundRequest<T> {
     id: MessageId,

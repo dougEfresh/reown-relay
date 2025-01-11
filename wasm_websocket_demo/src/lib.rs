@@ -2,20 +2,15 @@ mod utils;
 
 use {
     rand::rngs::OsRng,
+    reown_relay_client::rpc::{
+        auth::{ed25519_dalek::SigningKey, AuthToken},
+        domain::Topic,
+    },
+    reown_relay_client::websocket::{Client, CloseFrame, ConnectionHandler, PublishedMessage},
+    reown_relay_client::{ClientError, ConnectionOptions},
     std::{
         fmt::{Display, Formatter},
         time::Duration,
-    },
-    walletconnect_sdk::{
-        client::{
-            error::ClientError,
-            websocket::{Client, CloseFrame, ConnectionHandler, PublishedMessage},
-            ConnectionOptions,
-        },
-        rpc::{
-            auth::{ed25519_dalek::SigningKey, AuthToken},
-            domain::Topic,
-        },
     },
     wasm_bindgen::prelude::*,
     wasm_bindgen_futures::spawn_local,

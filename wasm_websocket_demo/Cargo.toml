@@ -26,7 +26,7 @@ web-sys = { version = "0.3", features = [
     "DateTimeValue", "SubtleCrypto", "Performance",
     "TimeEvent"
 ] }
-walletconnect_sdk = { path = "../" }
+reown-relay-client = { path = "../relay_client/" }
 console_error_panic_hook = { version = "0.1" }
 web-time = { version = "1", features = ["serde"] }
 gloo-timers = { version = "0.3", features = ["futures"] }

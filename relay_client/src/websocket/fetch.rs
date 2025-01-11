@@ -2,7 +2,7 @@ use {
     super::{create_request, Client, ResponseFuture},
     crate::error::Error,
     futures_util::{FutureExt, Stream},
-    relay_rpc::{
+    reown_relay_rpc::{
         domain::Topic,
         rpc::{BatchFetchMessages, ServiceRequest, SubscriptionData},
     },

@@ -5,7 +5,7 @@ use {
         MessageIdGenerator,
     },
     http::{HeaderMap, StatusCode},
-    relay_rpc::{
+    reown_relay_rpc::{
         auth::ed25519_dalek::SigningKey,
         domain::{DecodedClientId, SubscriptionId, Topic},
         jwt::{self, JwtError, VerifyableClaims},

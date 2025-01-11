@@ -36,9 +36,9 @@ jobs:
       - name: "Generate Changelog"
         run: cog changelog --at ${{ steps.release.outputs.version }} -t full_hash > GITHUB_CHANGELOG.md
 
-      - name: "Update Github release notes"
-        uses: softprops/action-gh-release@v1
-        with:
-          body_path: GITHUB_CHANGELOG.md
-          tag_name: ${{ steps.release.outputs.version }}
-          token: ${{ secrets.RELEASE_PAT }}
+      # - name: "Update Github release notes"
+        # uses: softprops/action-gh-release@v1
+        # with:
+          # body_path: GITHUB_CHANGELOG.md
+          # tag_name: ${{ steps.release.outputs.version }}
+          # token: ${{ secrets.RELEASE_PAT }}

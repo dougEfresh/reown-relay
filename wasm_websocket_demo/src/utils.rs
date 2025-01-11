@@ -1,11 +1,8 @@
 use {
     crate::ClientId,
     gloo_timers::future::TimeoutFuture,
+    reown_relay_client::{rpc::domain::Topic, websocket::Client, ConnectionOptions},
     std::{sync::Arc, time::Duration},
-    walletconnect_sdk::{
-        client::{websocket::Client, ConnectionOptions},
-        rpc::domain::Topic,
-    },
     wasm_bindgen::JsValue,
     web_sys::console,
 };

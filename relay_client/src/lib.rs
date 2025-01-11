@@ -1,7 +1,8 @@
+pub use crate::error::{ClientError, RequestBuildError};
+pub use reown_relay_rpc as rpc;
 use {
-    crate::error::{ClientError, RequestBuildError},
     ::http::HeaderMap,
-    relay_rpc::{
+    reown_relay_rpc::{
         auth::{SerializedAuthToken, RELAY_WEBSOCKET_ADDRESS},
         domain::{MessageId, ProjectId, SubscriptionId},
         rpc::{SubscriptionError, SubscriptionResult},
@@ -14,7 +15,6 @@ use {
     },
     url::Url,
 };
-
 pub mod error;
 pub mod http;
 pub mod websocket;

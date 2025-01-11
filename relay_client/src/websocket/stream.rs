@@ -17,7 +17,7 @@ use {
     },
     crate::{error::ClientError, HttpRequest, MessageIdGenerator},
     futures_util::{stream::FusedStream, SinkExt, Stream, StreamExt},
-    relay_rpc::{
+    reown_relay_rpc::{
         domain::MessageId,
         rpc::{self, Params, Payload, Response, ServiceRequest, Subscription},
     },

@@ -1,4 +1,4 @@
-use relay_rpc::rpc::{self, error::ServiceError};
+use reown_relay_rpc::rpc::{self, error::ServiceError};
 
 pub type BoxError = Box<dyn std::error::Error + Send + Sync>;
 

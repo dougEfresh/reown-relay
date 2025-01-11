@@ -1,8 +1,13 @@
 [package]
-name = "relay_rpc"
+name = "reown-relay-rpc"
 version = "0.1.0"
-edition = "2021"
-license = "Apache-2.0"
+edition.workspace = true
+authors.workspace = true
+repository.workspace = true
+license.workspace = true
+description.workspace = true
+homepage.workspace = true
+keywords.workspace = true
 
 [features]
 cacao = [

@@ -4,7 +4,7 @@ use {
         error::{ClientError, Error},
         ConnectionOptions,
     },
-    relay_rpc::{
+    reown_relay_rpc::{
         domain::{MessageId, SubscriptionId, Topic},
         rpc::{
             BatchFetchMessages,
