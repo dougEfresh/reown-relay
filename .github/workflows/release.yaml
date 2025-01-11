@@ -1,4 +1,6 @@
 name: "release"
+env:
+  PROJECT_ID: "dummy"
 
 on:
   push:

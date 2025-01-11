@@ -8,6 +8,8 @@ on:
       - ".github/**"
       - "docs/**"
       - "README.md"
+env:
+  PROJECT_ID: "dummy"
 
 concurrency:
   # Support push/pr as event types with different behaviors each:

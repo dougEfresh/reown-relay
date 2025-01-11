@@ -1,5 +1,7 @@
-pub use crate::error::{ClientError, RequestBuildError};
-pub use reown_relay_rpc as rpc;
+pub use {
+    crate::error::{ClientError, RequestBuildError},
+    reown_relay_rpc as rpc,
+};
 use {
     ::http::HeaderMap,
     reown_relay_rpc::{
