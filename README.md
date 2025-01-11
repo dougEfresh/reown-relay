@@ -1,6 +1,4 @@
-# WalletConnect Rust SDK
-
-This is the foundation for the WalletConnect Rust SDK. Currently, there's only the core client and the RPC types required to communicate with the Relay.
+# Reown Relay Wasm Client
 
 Examples:
 - [HTTP client](examples/http_client.rs)
@@ -14,15 +12,6 @@ The core Relay client. Provides access to all available Relay RPC methods to bui
 ## `relay_rpc`
 
 Provides all of the Relay domain types (e.g. `ClientId`, `ProjectId` etc.) as well as auth token generation and validation functionality.
-
-### `cacao` feature
-
-To aid IDE integration you may want to add this to your local `relay_rpc/Cargo.toml` file:
-
-```toml
-[features]
-default = ["cacao"]
-```
 
 # License
 

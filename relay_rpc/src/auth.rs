@@ -10,8 +10,6 @@ use {
     std::{fmt::Display, time::Duration},
 };
 
-#[cfg(feature = "cacao")]
-pub mod cacao;
 pub mod did;
 
 #[derive(Debug, thiserror::Error)]
