@@ -8,8 +8,7 @@ use {
             domain::Topic,
         },
         websocket::{Client, CloseFrame, ConnectionHandler, PublishedMessage},
-        ClientError,
-        ConnectionOptions,
+        ClientError, ConnectionOptions,
     },
     std::{
         fmt::{Display, Formatter},
@@ -119,16 +118,16 @@ fn create_conn_opts(address: &str, project_id: &str) -> Option<ConnectionOptions
 #[wasm_bindgen(start)]
 pub fn run() {
     console_error_panic_hook::set_once();
-    let project_id = env!("PROJECT_ID");
-    spawn_local(async {
+    let project_id = std::env::var("PROJECT_ID").expect("PROJECT_ID is not set in environment");
+    spawn_local(async move {
         let client1 = Client::new(Handler::new(ClientId::WC1));
         let client2 = Client::new(Handler::new(ClientId::WC2));
-        let opts = create_conn_opts("wss://relay.walletconnect.org", project_id);
+        let opts = create_conn_opts("wss://relay.walletconnect.org", &project_id);
         if opts.is_none() {
             return;
         }
         utils::connect("wc1", &client1, &opts.unwrap()).await;
-        let opts = create_conn_opts("wss://relay.walletconnect.org", project_id);
+        let opts = create_conn_opts("wss://relay.walletconnect.org", &project_id);
         if opts.is_none() {
             return;
         }

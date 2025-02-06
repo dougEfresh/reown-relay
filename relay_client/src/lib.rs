@@ -18,7 +18,6 @@ use {
     url::Url,
 };
 pub mod error;
-pub mod http;
 pub mod websocket;
 
 pub type HttpRequest<T> = ::http::Request<T>;
