@@ -1,15 +1,14 @@
 # Reown Relay Wasm Client
 
-Examples:
-- [HTTP client](examples/http_client.rs)
-- [WebSocket client](examples/websocket_client.rs)
-- [Webhook dispatch](examples/webhook.rs)
+## Examples
 
-## `relay_client`
+- [WebSocket client](examples/websocket_client.rs)
+
+## `reown-relay-client`
 
 The core Relay client. Provides access to all available Relay RPC methods to build on top of.
 
-## `relay_rpc`
+## `reown-relay-rpc`
 
 Provides all of the Relay domain types (e.g. `ClientId`, `ProjectId` etc.) as well as auth token generation and validation functionality.
 
