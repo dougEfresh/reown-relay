@@ -8,7 +8,8 @@ use {
             domain::Topic,
         },
         websocket::{Client, CloseFrame, ConnectionHandler, PublishedMessage},
-        ClientError, ConnectionOptions,
+        ClientError,
+        ConnectionOptions,
     },
     std::{
         fmt::{Display, Formatter},

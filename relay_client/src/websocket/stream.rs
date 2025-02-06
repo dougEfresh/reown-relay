@@ -2,7 +2,8 @@
 use tokio_tungstenite::{
     connect_async,
     tungstenite::{protocol::CloseFrame, Message},
-    MaybeTlsStream, WebSocketStream,
+    MaybeTlsStream,
+    WebSocketStream,
 };
 #[cfg(target_arch = "wasm32")]
 use tokio_tungstenite_wasm::{connect as connect_async, CloseFrame, Message, WebSocketStream};
@@ -10,7 +11,9 @@ use {
     super::{
         inbound::InboundRequest,
         outbound::{create_request, OutboundRequest, ResponseFuture},
-        CloseReason, TransportError, WebsocketClientError,
+        CloseReason,
+        TransportError,
+        WebsocketClientError,
     },
     crate::{error::ClientError, HttpRequest, MessageIdGenerator},
     futures_util::{stream::FusedStream, SinkExt, Stream, StreamExt},
